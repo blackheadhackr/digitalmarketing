@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+/* hide input type num arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#sidebarMenu{
+    z-index: 999;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+.nav-item a:active {
+    background-color: #b60d0d;
+    color: #000;
+    
+}
+.nav-item a i{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
+    
+}
+.nav-item a:hover i{
+    color: #000000;
+}
+.tgl-btn{
+    display:none;
+}
+
+.nav-item a:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+}
+.dashcol{
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+.dashcol .well{
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.img{
+    border:1px solid #E8E8E8;
+    text-align:center;
+    padding: 10px;
+}
+.img span{
+    color:#A1C8FE;
+    margin-left: 5%;
+}
+/* admin web contact form table mesage */
+.web-con-message {
+    max-width: 200px;
+    max-height:100px; 
+
+}
+.web-con-message p{
+    max-width: 100%;
+    max-height:100px; 
+    display: inline-block;
+    overflow-y:scroll;
+}
+.web-con-message p::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+
+
+  /* responive */
+@media (max-width: 768px) {
+  
+    .tgl-btn{
+         display:block;
+         padding: 0 10px;
+    }
+
+}
