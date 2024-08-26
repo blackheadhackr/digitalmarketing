@@ -28,6 +28,13 @@ class Blog_model extends CI_Model
         $a = $this->db->get('blog')->result();
         return $a;
     }
+    public function getfiveblog(){
+        $this->db->select('*');
+        $this->db->order_by('id','desc');
+        $this->db->limit(5);
+        $a = $this->db->get('blog')->result();
+        return $a;
+    }
     public function get_s_blog($id){
         $this->db->select('*');
         $this->db->where('id',$id);

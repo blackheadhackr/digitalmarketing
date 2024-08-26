@@ -29,7 +29,9 @@ class Home extends CI_Controller {
 	public function blog()
 	{
 		$a['blog'] = $this->Blog_model->getallblog();
-		$this->load->view('blog',$a);
+		$b['blogs'] = $this->Blog_model->getfiveblog();
+		$new = array_merge($a,$b);
+		$this->load->view('blog',$new);
 	}
 
 	public function blog_details()
