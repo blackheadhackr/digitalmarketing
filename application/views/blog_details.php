@@ -69,6 +69,21 @@
                                         <li><span class="posted-on"><i class="far fa-clock"></i> <a href="#!"><?=$blog->dateofupdation?></a></span></li>
                                     </ul>
 
+                                    <?=$blog->content?>
+
+                                </article>
+                                <!-- <article class="post__details">
+
+                                    <div class="post__thumb">
+                                    <img src="<?=base_url()?>assets/image/blog_img/<?=$blog->img?>" alt="<?=$blog->title?>">
+                                    </div>
+
+                                    <ul class="post__meta list-unstyled">
+                                        <li><span><i class="far fa-user"></i><span class="author vcard">Admin</span></span></li>
+                                        <li><a href="#!"><i class="far fa-comments"></i> Comments (3)</a></li>
+                                        <li><span class="posted-on"><i class="far fa-clock"></i> <a href="#!"><?=$blog->dateofupdation?></a></span></li>
+                                    </ul>
+
                                     <h2>Power of Digital Product Design for Series A Funding</h2>
                                     <p>Financial growth and wealth accumulation are common goals for individuals and businesses alike. However, navigating the complex world of finance, investments, and money management can be challenging. This is where a financial consultant can make a significant difference. Let's explore. </p>
                                     <p>One of the key ways to grow wealth is through investments. Financial consultants are experts in various investment opportunities, from stocks and bonds to real estate and alternative investments. They can guide you in making informed investment decisions based on your financial objectives.</p>
@@ -102,7 +117,7 @@
                                         app</h3>
                                     <p>consulting is an invaluable resource for anyone navigating the complexities of international travel, work, or family reunification. By enlisting the expertise of consultant, you can save time, reduce stress, and increase your chances of a successful application. Make sure to do your due diligence when choosing a consultant, and you'll be well on your way to realizing your global aspirations.</p>
 
-                                </article>
+                                </article> -->
 
 
                                 <div class="post__footer">
