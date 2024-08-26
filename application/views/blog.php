@@ -88,7 +88,7 @@
                                         </ul>
 
                                         <h3 class="post__title border_effect">
-                                            <a href="<?= base_url('blog-details') ?>"><?=$a->title?></a>
+                                            <a href="<?= base_url('blog-detail/'.$id) ?>"><?=$a->title?></a>
                                         </h3>
 
                                         <div class="post__excerpt">
@@ -255,17 +255,17 @@
                                     <h2 class="widget__title">Recent Posts</h2>
 
                                     <div class="widget__post">
-                                        <?php foreach($blogs as $b){?>
+                                        <?php foreach($blogs as $b){ $id = base64_encode($b->id)?>
                                             <div class="widget__post__item">
                                             <div class="post__thumb">
-                                                <a href="<?= base_url('blog-details') ?>"><img src="<?=base_url()?>assets/image/blog_img/<?=$b->img?>" alt="<?=$b->title?>"></a>
+                                                <a href="<?= base_url('blog-detail/'.$id) ?>"><img src="<?=base_url()?>assets/image/blog_img/<?=$b->img?>" alt="<?=$b->title?>"></a>
                                             </div>
                                             <div class="post__content">
                                                 <div class="post__meta">
                                                     <a href="#!"><i class="invite-text-gr-color far fa-user"></i>By Admin</a>
                                                     <a href="#!"><i class="invite-text-gr-color far fa-calendar"></i><?=$b->dateofupdation?></a>
                                                 </div>
-                                                <h4 class="post__title border__effect__2"><a href="<?= base_url('blog-details') ?>"><?=$b->title ?></a></h4>
+                                                <h4 class="post__title border__effect__2"><a href="<?= base_url('blog-detail/'.$id) ?>"><?=$b->title ?></a></h4>
                                             </div>
                                         </div>
                                         <?php } ?>

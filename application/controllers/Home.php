@@ -39,7 +39,9 @@ class Home extends CI_Controller {
 		$iid = $this->uri->segment(2);
 		$id = base64_decode($iid);
 		$a['blog']=$this->Blog_model->get_s_blog($id); // get specific blog against id
-		$this->load->view('blog_details',$a);
+		$b['blogs'] = $this->Blog_model->getfiveblog();
+		$new = array_merge($a,$b);
+		$this->load->view('blog_details',$new);
 	}
 
 	public function service()

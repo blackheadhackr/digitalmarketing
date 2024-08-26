@@ -11,7 +11,7 @@ class Blog extends CI_Controller {
                 $this->load->model('Blog_model');
         }
 
-        	// blog page -------------------------------------------
+        // blog page -------------------------------------------
 	public function blog(){
                 $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
                 $this->load->view('admin/blog',$a);
@@ -43,8 +43,7 @@ class Blog extends CI_Controller {
                         {
                                 $error = array('error' => $this->upload->display_errors());
                                 $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
-                                $newdata = array_merge($a,$error);
-                                
+                                $newdata = array_merge($a,$error);                                
                                 $this->load->view('admin/blog',$newdata);
                         }else{
 
@@ -59,7 +58,7 @@ class Blog extends CI_Controller {
                                 $desc   =        $this->input->post('desc');
                                 $sdesc   =       $this->input->post('sdesc');
                                 $date   =        date('d-m-y');
-
+                                
                                 $data = array(
                                         'title' => $title,
                                         'desc' => $sdesc,
