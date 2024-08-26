@@ -60,13 +60,13 @@
                                 <article class="post__details">
 
                                     <div class="post__thumb">
-                                        <img src="<?= base_url('assets/images/post_01.jpg') ?>" alt="">
+                                    <img src="<?=base_url()?>assets/image/blog_img/<?=$blog->img?>" alt="<?=$blog->title?>">
                                     </div>
 
                                     <ul class="post__meta list-unstyled">
                                         <li><span><i class="far fa-user"></i><span class="author vcard">Admin</span></span></li>
                                         <li><a href="#!"><i class="far fa-comments"></i> Comments (3)</a></li>
-                                        <li><span class="posted-on"><i class="far fa-clock"></i> <a href="#!">August 4, 2023</a></span></li>
+                                        <li><span class="posted-on"><i class="far fa-clock"></i> <a href="#!"><?=$blog->dateofupdation?></a></span></li>
                                     </ul>
 
                                     <h2>Power of Digital Product Design for Series A Funding</h2>

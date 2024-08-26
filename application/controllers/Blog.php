@@ -19,8 +19,7 @@ class Blog extends CI_Controller {
         public function add_blog(){
                 $this->form_validation->set_rules('title','Title Name','required', array('required' => 'Please fill title name first..........'));
                 $this->form_validation->set_rules('desc','description','required');
-                $this->form_validation->set_rules('sdesc','short description','required|max_length[160]', 
-                                                                array('max_length' => 'Please fill under 160 latter..........'),
+                $this->form_validation->set_rules('sdesc','short description','required',
                                                                 array('required' => 'Please fill short description first..........'));
 
                 if($this->form_validation->run() == false){
@@ -34,8 +33,8 @@ class Blog extends CI_Controller {
                         $config['upload_path'] = './assets/image/blog_img';
                         $config['allowed_types'] = 'gif|jpg|png';
                         $config['max_size']     = '1024'; //1024 = 1mb 
-                        $config['max_width'] = '750';
-                        $config['max_height'] = '750';
+                        // $config['max_width'] = '750';
+                        // $config['max_height'] = '750';
 
                         $this->load->library('upload', $config);
                         $this->upload->initialize($config);
@@ -103,8 +102,8 @@ class Blog extends CI_Controller {
                         $config['upload_path'] = './assets/image/blog_img';
                         $config['allowed_types'] = 'gif|jpg|png';
                         $config['max_size']     = '1024'; //1024 = 1mb 
-                        $config['max_width'] = '750';
-                        $config['max_height'] = '750';
+                        // $config['max_width'] = '750';
+                        // $config['max_height'] = '750';
 
                         $this->load->library('upload',$config);
                         $this->upload->initialize($config);

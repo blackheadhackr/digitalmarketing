@@ -56,8 +56,56 @@
                         <div class="col-lg-8">
 
                             <div class="blog__post__wrapper">
+                                <?php foreach($blog as $a){
+                                    $id = base64_encode($a->id);
+                                    ?>
+                                    
+                                    <article class="single__post__item">
 
-                                <article class="single__post__item">
+                                    <div class="post__thumbnail__wrapper">
+                                        <a href="<?= base_url('blog-detail/'.$id) ?>">
+                                            <!-- <img src="<?= base_url('assets/images/post_01.jpg') ?>" alt=""> -->
+                                            <img src="<?=base_url()?>assets/image/blog_img/<?=$a->img?>" alt="<?=$a->title?>">
+                                        </a>
+                                    </div>
+
+                                    <div class="post__content__wrapper">
+
+                                        <ul class="post__meta list-unstyled">
+                                            <li>
+                                                <span>
+                                                    <i class="far fa-user"></i><span class="author vcard">Admin</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <a href="#!"><i class="far fa-comments"></i> Comments (3)</a>
+                                            </li>
+                                            <li>
+                                                <span class="posted-on">
+                                                    <i class="far fa-clock"></i> <a href="#!"><?=$a->dateofupdation?></a>
+                                                </span>
+                                            </li>
+                                        </ul>
+
+                                        <h3 class="post__title border_effect">
+                                            <a href="<?= base_url('blog-details') ?>"><?=$a->title?></a>
+                                        </h3>
+
+                                        <div class="post__excerpt">
+                                            <p><?=$a->desc?></p>
+                                        </div>
+
+                                        <div class="post__read__more">
+                                            <a href="#!" class="btn__link">Read More <span><img src="assets/images/arrow-right2.svg" alt=""></span></a>
+                                        </div>
+
+                                    </div>
+
+                                </article>
+                                <?php } ?>
+
+                                
+                                <!-- <article class="single__post__item">
 
                                     <div class="post__thumbnail__wrapper">
                                         <a href="<?= base_url('blog-details') ?>">
@@ -98,9 +146,9 @@
 
                                     </div>
 
-                                </article>
+                                </article> -->
 
-                                <article class="single__post__item">
+                                <!-- <article class="single__post__item">
 
                                     <div class="post__thumbnail__wrapper">
                                         <a href="<?= base_url('blog-details') ?>">
@@ -182,7 +230,7 @@
 
                                     </div>
 
-                                </article>
+                                </article> -->
 
                             </div>
 
