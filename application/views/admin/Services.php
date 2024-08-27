@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <meta name="theme-color" content="#7952b3">
-    <title>Sanatan sewadaar - Services</title>
+    <title>Services</title>
     <!-- top css file include -->
     <?php $this->load->view('admin/include/head');?>
 

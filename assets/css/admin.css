@@ -3,8 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    
+    font-family: "Poppins", sans-serif; 
 }
 /* hide input type num arrow */
 input::-webkit-outer-spin-button,
@@ -12,11 +11,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 #sidebarMenu{
     z-index: 999;
 }
-
 .nav-item a {
     text-decoration: none;
     color: #fff;
@@ -39,7 +36,6 @@ input::-webkit-inner-spin-button {
 .tgl-btn{
     display:none;
 }
-
 .nav-item a:hover {
     background: #fff;
     color: #000;
@@ -49,8 +45,6 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
     padding: 10px;
 }
-
-
 .dashcol .well{
     border-radius: 10px;
     padding: 20px;
@@ -70,7 +64,6 @@ input::-webkit-inner-spin-button {
 .web-con-message {
     max-width: 200px;
     max-height:100px; 
-
 }
 .web-con-message p{
     max-width: 100%;
@@ -82,10 +75,6 @@ input::-webkit-inner-spin-button {
     display: none;
   }
 
-
-
-
-
   /* responive */
 @media (max-width: 768px) {
   
@@ -93,5 +82,4 @@ input::-webkit-inner-spin-button {
          display:block;
          padding: 0 10px;
     }
-
 }

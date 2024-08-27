@@ -66,6 +66,7 @@ $route['web-contact-data'] = 'Web_contact/get_web_contact_data';
 $route['New-Joiner'] = 'joiner/our_joiner';
 $route['gallery'] = 'Allimg/gallery';
 $route['services'] = 'Services/load_services';
+$route['load-catg'] = 'welcome/load_catg';
 
 /**
  * web route ==================================================================================

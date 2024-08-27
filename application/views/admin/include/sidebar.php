@@ -6,6 +6,12 @@
                 <a class="nav-link" href="<?=base_url('dashbord')?>"> <i class="fa-solid fa-house-chimney"></i> Dashboard </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="<?=base_url('load-catg')?>">
+                <i class="fa fa-tachometer"></i> category 
+                </a>
+            </li>
+            
+            <li class="nav-item">
                 <a class="nav-link" href="<?=base_url('update-banner')?>">
                     <i class="fa-solid fa-image"></i> Add Banner
                 </a>

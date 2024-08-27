@@ -199,48 +199,6 @@
                                             </div>
                                         </div>
                                         <?php } ?>
-
-                                        <!-- <div class="widget__post__item">
-                                            <div class="post__thumb">
-                                                <a href="<?= base_url('blog-details') ?>"><img src="assets/images/post_01.jpg" alt=""></a>
-                                            </div>
-                                            <div class="post__content">
-                                                <div class="post__meta">
-                                                    <a href="#!"><i class="invite-text-gr-color far fa-user"></i>By Admin</a>
-                                                    <a href="#!"><i class="invite-text-gr-color far fa-calendar"></i>19 feb/21</a>
-                                                </div>
-                                                <h4 class="post__title border__effect__2"><a href="<?= base_url('blog-details') ?>">WHAT IS DESIGN RESEARCH?</a></h4>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="widget__post__item">
-                                            <div class="post__thumb">
-                                                <a href="<?= base_url('blog-details') ?>"><img src="assets/images/post_02.jpg" alt=""></a>
-                                            </div>
-                                            <div class="post__content">
-                                                <div class="post__meta">
-                                                    <a href="#!"><i class="invite-text-gr-color far fa-user"></i>By Admin</a>
-                                                    <a href="#!"><i class="invite-text-gr-color far fa-calendar"></i>19 feb/21</a>
-                                                </div>
-                                                <h4 class="post__title border__effect__2"><a href="<?= base_url('blog-details') ?>">LAZAREV. WON RED DOT FOR UKRAINIAN CHARITY PROJECT</a></h4>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="widget__post__item">
-                                            <div class="post__thumb">
-                                                <a href="<?= base_url('blog-details') ?>"><img src="assets/images/post_04.jpg" alt=""></a>
-                                            </div>
-                                            <div class="post__content">
-                                                <div class="post__meta">
-                                                    <a href="#!"><i class="invite-text-gr-color far fa-user"></i>By Admin</a>
-                                                    <a href="#!"><i class="invite-text-gr-color far fa-calendar"></i>19 feb/21</a>
-                                                </div>
-                                                <h4 class="post__title border__effect__2"><a href="<?= base_url('blog-details') ?>">WEBBY HONOREE - LAZAREV. IS KEEPING TO WIN</a></h4>
-                                            </div>
-                                        </div> -->
-
                                     </div>
                                 </div>
 
@@ -262,7 +220,7 @@
                                 </div>
 
                                 
-                                <div class="widget">
+                                <!-- <div class="widget">
                                     <h2 class="widget__title">
                                         <span>Tags</span>
                                     </h2>
@@ -276,7 +234,7 @@
                                         <a href="#!">Optimization</a>
                                         <a href="#!">Planning</a>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 
