@@ -222,7 +222,7 @@
                                 timer: 1500
                             });
                             $("#catgform")[0].reset();
-                            setTimeout(location.reload.bind(location), 1500);
+                            setTimeout(location.reload.bind(location), 1600);
                         }
                     }
                 })
