@@ -78,7 +78,7 @@ class Welcome extends CI_Controller {
 			$id = $this->input->post('catid');
 			$a = $this->Web_model->up_catg($name,$id);
 				if($a){
-					$all_data = array('result' => 'success', 'msg' => "your Category is added successfylly!");
+					$all_data = array('result' => 'success', 'msg' => "your Category is updated successfylly!");
 				}else{
 					$all_data = array('result' => 'error', 'msg' => "please make some change first...");
 				}
