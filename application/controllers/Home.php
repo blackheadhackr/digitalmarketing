@@ -30,7 +30,8 @@ class Home extends CI_Controller {
 	{
 		$a['blog'] = $this->Blog_model->getallblog();
 		$b['blogs'] = $this->Blog_model->getfiveblog();
-		$new = array_merge($a,$b);
+		$c['catg'] = $this->Web_model->get_all_catg();
+		$new = array_merge($a,$b,$c);
 		$this->load->view('blog',$new);
 	}
 
