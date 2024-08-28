@@ -41,7 +41,7 @@ class Web_model extends CI_Model
         $this->db->where('id',$id);
         $this->db->delete('catg');
         $a = $this->db->affected_rows();
-        if($a > 0){
+        if($a >= 1){
             return $a;
         }else{
             return false;

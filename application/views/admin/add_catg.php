@@ -136,6 +136,7 @@
     <!-- data insert -->
     <script>
         $(document).ready(function(){
+            // insert catg
             $('#catgform').on('submit',function(e){
                 e.preventDefault();
                 var catg = $('#Catogery1').val();
@@ -170,6 +171,7 @@
                     }
                 })
             });
+            // get single catg
             $(document).on('click','.edit',function(){
                 var id = $(this).attr('id');
                 $.ajax({
@@ -193,6 +195,7 @@
                     }
                 });
             });
+            // update catg
             $('#upcatg').on('submit',function(e){
                 e.preventDefault();
                 var catg = $('#Catogery1').val();
@@ -227,6 +230,7 @@
                     }
                 })
             });
+            // delete catg
             $(document).on('click','.delete', function(){
                 var id = $(this).attr('id')
                 Swal.fire({
