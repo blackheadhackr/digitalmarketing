@@ -37,4 +37,14 @@ class Web_model extends CI_Model
             return false;
         }
     }
+    public function del_catg($id){
+        $this->db->where('id',$id);
+        $this->db->delete('catg');
+        $a = $this->db->affected_rows();
+        if($a > 0){
+            return $a;
+        }else{
+            return false;
+        }
+    }
 }

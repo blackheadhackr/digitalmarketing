@@ -227,6 +227,45 @@
                     }
                 })
             });
+            $(document).on('click','.delete', function(){
+                var id = $(this).attr('id')
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+
+                        $.ajax({
+                            url:"<?=base_url('welcome/delete_catg')?>",
+                            type : 'post',
+                            dataType:"json",
+                            data : {id:id},
+                            success:function(data){
+                                if(data.result == 'error'){
+                                    Swal.fire({
+                                    title: "oohh! :)",
+                                    text: data.message,
+                                    icon: "error"
+                                    });
+                                }else{
+                                    Swal.fire({
+                                    title: "Deleted!",
+                                    text: data.message,
+                                    icon: "success"
+                                    });
+                                    setTimeout(location.reload.bind(location), 1600);
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+
         });
     </script>
 </body>

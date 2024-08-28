@@ -86,4 +86,20 @@ class Welcome extends CI_Controller {
 
 		echo json_encode($all_data);
 	}
+	public function delete_catg(){
+		$id = $this->input->post('id');
+		$a = $this->Web_model->del_catg($id);
+		if($a){
+			$all_data = array(
+				'result'=> 'success',
+				'message' => 'you have successfully deleted this category'
+			);
+		}else{
+			$all_data = array(
+				'result'=> 'error',
+				'message' => 'you have already deleted this category'
+			);
+		}
+		echo json_encode($all_data);
+	}
 }
