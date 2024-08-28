@@ -9,6 +9,7 @@ class Home extends CI_Controller {
 		$this->load->model('all_img');
 		$this->load->model('Contact');
 		$this->load->model('Blog_model');
+		$this->load->model('Web_model');
 	}
 
 	public function index()

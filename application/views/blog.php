@@ -323,7 +323,7 @@
                                     </h2>
                                     <ul class="widget__category list-unstyled">
                                         <?php foreach($catg as $cat) { ?> 
-                                            <li><a href="#!">DEVELOPMENT <span>(22)</span></a></li>
+                                            <li><a href="#!"><?=$cat->name?><span>(22)</span></a></li>
                                         <?php } ?>
                                         <!--<li><a href="#!">DEVELOPMENT <span>(22)</span></a></li>
                                         <li><a href="#!">STRATEGY <span>(30)</span></a></li>
