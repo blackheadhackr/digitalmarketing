@@ -50,6 +50,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="title" value="<?=$blog->title?>" name="title">
                                         </div><div class="text-danger"><?= form_error('title');?></div>
+                                        
                                     <div class="mb-3">
                                         <label for="sdesc" class="form-label">Short Discription<span
                                                 class="text-danger">* (max 155 char. to 160 char.)</span></label>

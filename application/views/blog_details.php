@@ -172,11 +172,11 @@
                             <div class="blog__sidebar sidebar__area">
 
                                 <div class="widget">
-                                    <h2 class="widget__title">Search</h2>
+                                    <!-- <h2 class="widget__title">Search</h2>
                                     <form class="widget__search" action="#">
                                         <input type="text" placeholder="Search...">
                                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    </form>
+                                    </form> -->
                                 </div>
                                 
 
@@ -208,14 +208,17 @@
                                         <span>Categories</span>
                                     </h2>
                                     <ul class="widget__category list-unstyled">
-                                        <li><a href="#!">DEVELOPMENT <span>(22)</span></a></li>
+                                        <?php foreach($catg as $cat) { ?> 
+                                            <li><a href="#!"><?=$cat->name?><span>(22)</span></a></li>
+                                        <?php } ?>
+                                        <!--<li><a href="#!">DEVELOPMENT <span>(22)</span></a></li>
                                         <li><a href="#!">STRATEGY <span>(30)</span></a></li>
                                         <li><a href="#!">DESIGN <span>(24)</span></a></li>
                                         <li><a href="#!">UI/UX Experience <span>(15)</span></a></li>
                                         <li><a href="#!">WORK CULTURE <span>(10)</span></a></li>
                                         <li><a href="#!">Digital Marketing <span>(13)</span></a></li>
                                         <li><a href="#!">Product Design <span>(05)</span></a></li>
-                                        <li><a href="#!">Web Development <span>(03)</span></a></li>
+                                        <li><a href="#!">Web Development <span>(03)</span></a></li> -->
                                     </ul>
                                 </div>
 

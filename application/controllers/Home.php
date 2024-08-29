@@ -29,6 +29,10 @@ class Home extends CI_Controller {
 
 	public function blog()
 	{
+		// $c['catg'] = $this->Web_model->get_all_catg1();
+		// echo "<pre>";
+		// print_r($c);
+		// exit;
 		$a['blog'] = $this->Blog_model->getallblog();
 		$b['blogs'] = $this->Blog_model->getfiveblog();
 		$c['catg'] = $this->Web_model->get_all_catg();
@@ -42,7 +46,8 @@ class Home extends CI_Controller {
 		$id = base64_decode($iid);
 		$a['blog']=$this->Blog_model->get_s_blog($id); // get specific blog against id
 		$b['blogs'] = $this->Blog_model->getfiveblog();
-		$new = array_merge($a,$b);
+		$c['catg'] = $this->Web_model->get_all_catg();
+		$new = array_merge($a,$b,$c);
 		$this->load->view('blog_details',$new);
 	}
 

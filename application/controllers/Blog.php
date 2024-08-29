@@ -9,16 +9,20 @@ class Blog extends CI_Controller {
                 $this->load->model('all_img');
                 $this->load->model('Contact');
                 $this->load->model('Blog_model');
+		$this->load->model('Web_model');
         }
 
         // blog page -------------------------------------------
 	public function blog(){
                 $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
-                $this->load->view('admin/blog',$a);
+                $b['catg'] = $this->Web_model->get_all_catg();
+		$new = array_merge($a,$b);
+                $this->load->view('admin/blog',$new);
 	}
         public function add_blog(){
                 $this->form_validation->set_rules('title','Title Name','required', array('required' => 'Please fill title name first..........'));
                 $this->form_validation->set_rules('desc','description','required');
+                $this->form_validation->set_rules('catg','Category','required');
                 $this->form_validation->set_rules('sdesc','short description','required',
                                                                 array('required' => 'Please fill short description first..........'));
 
@@ -26,7 +30,8 @@ class Blog extends CI_Controller {
 
                 $error['error'] = validation_errors();
                 $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
-                $newdata = array_merge($a,$error);
+                $b['catg'] = $this->Web_model->get_all_catg();
+                $newdata = array_merge($a,$error,$b);
 
                 $this->load->view('admin/blog',$newdata);
                 }else{
@@ -43,7 +48,8 @@ class Blog extends CI_Controller {
                         {
                                 $error = array('error' => $this->upload->display_errors());
                                 $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
-                                $newdata = array_merge($a,$error);                                
+                                $b['catg'] = $this->Web_model->get_all_catg();
+                                $newdata = array_merge($a,$error,$b);                                
                                 $this->load->view('admin/blog',$newdata);
                         }else{
 
@@ -57,10 +63,12 @@ class Blog extends CI_Controller {
                                 $title  =        $this->input->post('title');
                                 $desc   =        $this->input->post('desc');
                                 $sdesc   =       $this->input->post('sdesc');
+                                $catg   =       $this->input->post('catg');
                                 $date   =        date('d-m-y');
                                 
                                 $data = array(
                                         'title' => $title,
+                                        'category' => $catg,
                                         'desc' => $sdesc,
                                         'dateofupdation' => $date,
                                         'img' => $new_img,

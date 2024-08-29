@@ -315,15 +315,15 @@
 
                                     </div>
                                 </div>
-
-
                                 <div class="widget">
                                     <h2 class="widget__title">
                                         <span>Categories</span>
                                     </h2>
                                     <ul class="widget__category list-unstyled">
                                         <?php foreach($catg as $cat) { ?> 
-                                            <li><a href="#!"><?=$cat->name?><span>(22)</span></a></li>
+                                            <li><a href="#!"><?=$cat->name?><span>(
+                                                    <?php $num = 0; foreach($blogs as $c){ if($c->category == $cat->name){echo $num;} } ?>
+                                                )</span></a></li>
                                         <?php } ?>
                                         <!--<li><a href="#!">DEVELOPMENT <span>(22)</span></a></li>
                                         <li><a href="#!">STRATEGY <span>(30)</span></a></li>
@@ -337,7 +337,7 @@
                                 </div>
 
                                 
-                                <div class="widget">
+                                <!-- <div class="widget">
                                     <h2 class="widget__title">
                                         <span>Tags</span>
                                     </h2>
@@ -351,7 +351,7 @@
                                         <a href="#!">Optimization</a>
                                         <a href="#!">Planning</a>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 

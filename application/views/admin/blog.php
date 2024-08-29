@@ -46,6 +46,22 @@
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="title" name="title">
                                         </div><div class="text-danger"><?= form_error('title');?></div>
+
+
+                                    <div class="mb-3">
+                                        <label for="sdesc" class="form-label">Serch Category<span
+                                                class="text-danger">*</span></label>                                                
+                                                <div>
+                                                    <input autoComplete="on" class="form-control" list="suggestions" name="catg"/> 
+                                                    <datalist id="suggestions">
+                                                        <?php foreach($catg as $cat){ ?> 
+                                                            <option><?=$cat->name?></option>
+                                                        <?php } ?>
+                                                    </datalist>
+                                                </div>
+                                    </div><div class="text-danger"><?=form_error('catg');?></div>
+
+
                                     <div class="mb-3">
                                         <label for="sdesc" class="form-label">Short Discription<span
                                                 class="text-danger">* (max 155 char. to 160 char.)</span></label>
@@ -73,6 +89,7 @@
                                     <th scope="col">Image</th>
                                     <th scope="col">Img Name</th>
                                     <th scope="col">blog title</th>
+                                    <th scope="col">Category</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -87,6 +104,7 @@
                                     <td><img src="<?=base_url()?>assets/image/blog_img/<?=$a->img?>" alt="<?=$a->img?>" style="width:30%; height:30px;"> </td>
                                     <td><?=$a->img?></td>
                                     <td><?=$a->title?></td>
+                                    <td><?=$a->category?></td>
                                     <td>
                                         <a href="<?=base_url('blog-details/'.$id)?>" class="btn btn-outline-success edit"><i class="fa-solid fa-pen-to-square"></i></a>
                                         /
