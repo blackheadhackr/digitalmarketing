@@ -57,7 +57,7 @@
                                                 class="text-danger">*</span></label>                                                
                                            <select class="form-select" aria-label="Default select example" name="catg">
                                                 <?php foreach($catg as $cat){ ?> 
-                                                            <option <?php echo ($blog->category = $cat->name)? "selected" : "" ?>><?=$blog->category?></option>
+                                                            <option <?php echo ($cat->name = $blog->category)? "selected" : "" ?>><?=$cat->name?></option>
                                                         <?php } ?>
                                                 </select>
                                     </div><div class="text-danger"><?=form_error('catg');?></div>
