@@ -106,7 +106,7 @@ class Blog extends CI_Controller {
                 $title = $this->input->post('title');
                 $sdesc = $this->input->post('sdesc');
                 $desc = $this->input->post('desc');
-
+                $catg = $this->input->post('catg');
                if($img != null){
                         $config['upload_path'] = './assets/image/blog_img';
                         $config['allowed_types'] = 'gif|jpg|png';
@@ -155,6 +155,7 @@ class Blog extends CI_Controller {
                         "title" =>$title,
                         "desc" =>$sdesc,
                         "content" =>$desc,
+                        "category" =>$catg
                        );
                        $a = $this->Blog_model->updateblog($data,$id);
                        if($a){

@@ -55,17 +55,7 @@
 
                                         <label for="sdesc" class="form-label">Serch Category<span
                                                 class="text-danger">*</span></label>                                                
-                                                <!-- <div>
-                                                    <input autoComplete="on" class="form-control" list="suggestions" name="catg"/> 
-                                                    <datalist id="suggestions">
-                                                        <?php foreach($catg as $cat){ ?> 
-                                                            <option <?php echo ($blog->category = $cat->name)? "selected" : "" ?>><?=$blog->category?></option>
-                                                        <?php } ?>
-                                                    </datalist>
-                                                </div> -->
-
-
-                                                <select class="form-select" aria-label="Default select example" name="catg">
+                                           <select class="form-select" aria-label="Default select example" name="catg">
                                                 <?php foreach($catg as $cat){ ?> 
                                                             <option <?php echo ($blog->category = $cat->name)? "selected" : "" ?>><?=$blog->category?></option>
                                                         <?php } ?>
