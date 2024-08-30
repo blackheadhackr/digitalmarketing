@@ -322,7 +322,7 @@
                                     <ul class="widget__category list-unstyled">
                                         <?php foreach($catg as $cat) { ?> 
                                             <li><a href="#!"><?=$cat->name?><span>
-                                                    <?php $num = 0; foreach($blogs as $c){ echo ($c->category == $cat->name)? $num : ""; $num++; } ?>
+                                                    <?php $num = 0; foreach($blogs as $c){ ($c->category == $cat->name)? $num++ : ""; echo $num;} ?>
                                                 </span></a></li>
                                         <?php } ?>
                                         <!--<li><a href="#!">DEVELOPMENT <span>(22)</span></a></li>
