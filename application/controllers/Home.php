@@ -29,13 +29,8 @@ class Home extends CI_Controller {
 
 	public function blog()
 	{
-		// $c['catg'] = $this->Web_model->get_all_catg1();
-		// echo "<pre>";
-		// print_r($c);
-		// exit;
 		$a['blog'] = $this->Blog_model->getallblog();
 		$b['blogs'] = $this->Blog_model->getfiveblog();
-		// $c['catg'] = $this->Web_model->get_all_catg();
 		$c['catg'] = $this->Web_model->get_all_catg1();
 		$new = array_merge($a,$b,$c);
 		$this->load->view('blog',$new);
