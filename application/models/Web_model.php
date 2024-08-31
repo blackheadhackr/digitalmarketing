@@ -47,5 +47,16 @@ class Web_model extends CI_Model
             return false;
         }
     }
+    public function get_all_catg1(){
+            $this->db->select('c.name, c.name');
+            $this->db->select('COUNT(b.category) as number_of_blogs', FALSE);
+            $this->db->from('catg c');
+            $this->db->join('blog b', 'c.name = b.category', 'left');
+            $this->db->group_by('c.name, c.name');
+            $this->db->order_by('c.name');
+            $query = $this->db->get();
+            return $query->result();
+        
+    }
     
 }

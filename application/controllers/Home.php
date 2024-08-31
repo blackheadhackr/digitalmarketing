@@ -35,7 +35,8 @@ class Home extends CI_Controller {
 		// exit;
 		$a['blog'] = $this->Blog_model->getallblog();
 		$b['blogs'] = $this->Blog_model->getfiveblog();
-		$c['catg'] = $this->Web_model->get_all_catg();
+		// $c['catg'] = $this->Web_model->get_all_catg();
+		$c['catg'] = $this->Web_model->get_all_catg1();
 		$new = array_merge($a,$b,$c);
 		$this->load->view('blog',$new);
 	}
@@ -45,8 +46,8 @@ class Home extends CI_Controller {
 		$iid = $this->uri->segment(2);
 		$id = base64_decode($iid);
 		$a['blog']=$this->Blog_model->get_s_blog($id); // get specific blog against id
-		$b['blogs'] = $this->Blog_model->getfiveblog();
-		$c['catg'] = $this->Web_model->get_all_catg();
+		$b['blogs'] = $this->Blog_model->getfiveblog();		
+		$c['catg'] = $this->Web_model->get_all_catg1();
 		$new = array_merge($a,$b,$c);
 		$this->load->view('blog_details',$new);
 	}
