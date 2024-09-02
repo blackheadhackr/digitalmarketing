@@ -57,22 +57,12 @@
             </a>
         </h6>
         <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Current month
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Last quarter
-                </a>
-            </li>
             <?php if($this->session->userdata('usertype') == 'admin' || $this->session->userdata('usertype') == 'super admin') { ?> 
-            <li class="nav-item">
-                <a class="nav-link" href="<?=base_url('create-user')?>"><i class="fa-solid fa-user-plus"></i>
-                    Add User
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?=base_url('create-user')?>"><i class="fa-solid fa-user-plus"></i>
+                        Add User
+                    </a>
+                </li>
             <?php }?>
             <li class="nav-item">
                 <a class="nav-link" href="<?=base_url('Login_admin/logout')?>"><i class="fa-solid fa-right-from-bracket"></i>
