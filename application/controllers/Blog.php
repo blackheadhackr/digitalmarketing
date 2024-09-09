@@ -37,9 +37,7 @@ class Blog extends CI_Controller {
                 }else{
                         $config['upload_path'] = './assets/image/blog_img';
                         $config['allowed_types'] = 'gif|jpg|png';
-                        $config['max_size']     = '1024'; //1024 = 1mb 
-                        // $config['max_width'] = '750';
-                        // $config['max_height'] = '750';
+                        $config['max_size']     = '1024'; //1024 = 1mb
 
                         $this->load->library('upload', $config);
                         $this->upload->initialize($config);
@@ -119,11 +117,11 @@ class Blog extends CI_Controller {
 
                         if ( ! $this->upload->do_upload('blogimg'))
                         {
-                                
-                              $blg_data = array(
-                                "result"=>"error",
-                                "error"=>$this->upload->display_errors()
-                              );
+                                $er = array('error' => $this->upload->display_errors());
+                                $a['blog'] = $this->Blog_model->get_s_blog($id); // get specific blog against id
+                                $b['catg'] = $this->Web_model->get_all_catg();
+                                $new = array_merge($a, $b, $er);
+                                $this->load->view('admin/blog_details', $new);
                         }else{
                                $name = $this->upload->data(); 
                                $img_name = $name['file_name'];
@@ -133,23 +131,16 @@ class Blog extends CI_Controller {
                                );
                                $a = $this->Blog_model->updateblogimg($data,$id);
                                if($a){
-                                        $blg_data = array(
-                                                "result"=>"success",
-                                                "message"=>'<div class="alert alert-success alert-dismissible fade show" role="alert"> <strong>Success!</strong> Your blog is Updated successfully....
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                                </div>'
-                                      );
+                                        $this->session->set_flashdata('blogmsg', '<div class="alert alert-success alert-dismissible fade show" role="alert"> <strong>Success!</strong> Your blog is updated successfully.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
+                                        redirect('blog');
                                 
                                 }else{
-                                        $blg_data = array(
-                                                "result"=>"success",
-                                                "message"=>'<div class="alert alert-danger alert-dismissible fade show" role="alert"> <strong>Error!</strong> Something went wrong ........
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                                </div>'
-                                      );
+                                        $this->session->set_flashdata('blogmsg', '<div class="alert alert-danger alert-dismissible fade show" role="alert"> <strong>Error!</strong> Something went wrong..... blog is not updated
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
+                                        redirect('blog');
                                 }     
-                        }
-               }else{
+                }}else{
                 $data = array(
 
                         "title" =>$title,
@@ -159,23 +150,16 @@ class Blog extends CI_Controller {
                        );
                        $a = $this->Blog_model->updateblog($data,$id);
                        if($a){
-                        $blg_data = array(
-                                "result"=>"success",
-                                "message"=>'<div class="alert alert-success alert-dismissible fade show" role="alert"> <strong>Success!</strong> Your blog is Updated successfully....
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>'
-                      );
+                        $this->session->set_flashdata('blogmsg', '<div class="alert alert-success alert-dismissible fade show" role="alert"> <strong>Success!</strong> Your blog is updated successfully.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
+                        redirect('blog');
                 
-                }else{
-                        $blg_data = array(
-                                "result"=>"success",
-                                "message"=>'<div class="alert alert-danger alert-dismissible fade show" role="alert"> <strong>Error!</strong> Something went wrong ........
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>'
-                      );
-                }    
+                        }else{
+                                $this->session->set_flashdata('blogmsg', '<div class="alert alert-danger alert-dismissible fade show" role="alert"> <strong>Error!</strong> Something went wrong..... blog is not updated
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
+                                redirect('blog');
+                        }    
                }
-               echo json_encode($blg_data);
         }
         public function deleteblog(){
                 $id = $this->input->post('id');

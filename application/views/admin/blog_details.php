@@ -34,7 +34,7 @@
                         <div class="col-sm-12">
                             <div class="container">
                                 
-                                <form id="update_blog"enctype="multipart/form-data">
+                                <form action="<?=base_url('blog/update_blog')?>" method="post" enctype="multipart/form-data">
                                     <div class="img">
                                         <img src="<?=base_url()?>assets/image/blog_img/<?=$blog->img?>" alt="<?=$blog->img?>" style="width:10%; height:auto;"><span>Your current Image</span>
                                     </div>
@@ -43,6 +43,7 @@
                                         <label for="formFileLg" class="form-label">Image<span
                                                 class="text-danger">* (img size: 750X750 , 1MB)</span></label>
                                         <input class="form-control form-control-lg" id="formFileLg" type="file" name="blogimg">
+                                        <div class="text-danger"><?=$this->upload->display_errors()?></div>
                                     </div>
                                     <div class="text-danger imgerror"></div>
                                     <div class="mb-3">
