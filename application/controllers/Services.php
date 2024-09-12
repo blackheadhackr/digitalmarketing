@@ -16,10 +16,8 @@ class Services extends CI_Controller
     */
    public function add_services(){
     $this->form_validation->set_rules('title', 'Title','required');
-    $this->form_validation->set_rules('sdesc', 'Description','trim|required|min_length[155]|max_length[160]');
+    $this->form_validation->set_rules('sdesc', 'Description','required');
     $this->form_validation->set_message('required', 'Please fill this feild');
-    $this->form_validation->set_message('min_length', 'Please fill this feild within 155 char.');
-    $this->form_validation->set_message('max_length', 'Please fill this feild within 160 char.');
 
     if($this->form_validation->run() == false){
         $all_data = array(
@@ -31,8 +29,8 @@ class Services extends CI_Controller
         $config['upload_path']          = './assets/image/services/';
         $config['allowed_types']        = 'gif|jpg|png';
         $config['max_size']             = 1024; // 1024 = 1MB
-        $config['max_width']            = 500;
-        $config['max_height']           = 500;
+        // $config['max_width']            = 500;
+        // $config['max_height']           = 500;
 
         $this->load->library('upload', $config);$this->upload->initialize($config);
         if ( ! $this->upload->do_upload('servicesimage')) {
@@ -110,10 +108,8 @@ class Services extends CI_Controller
         $id = $this->input->post('id');
 
         $this->form_validation->set_rules('title', 'Title','required');
-        $this->form_validation->set_rules('sdesc', 'Description','trim|required|min_length[155]|max_length[160]');
+        $this->form_validation->set_rules('sdesc', 'Description','required');
         $this->form_validation->set_message('required', 'Please fill this feild');
-        $this->form_validation->set_message('min_length', 'Please fill this feild within 155 char.');
-        $this->form_validation->set_message('max_length', 'Please fill this feild within 160 char.');
 
         if($this->form_validation->run() == false){
             $all_data = array(
@@ -125,8 +121,8 @@ class Services extends CI_Controller
             $config['upload_path']          = './assets/image/services/';
             $config['allowed_types']        = 'gif|jpg|png';
             $config['max_size']             = 1024; // 1024 = 1MB
-            $config['max_width']            = 500;
-            $config['max_height']           = 500;
+            // $config['max_width']            = 500;
+            // $config['max_height']           = 500;
 
             if($_FILES['servicesimage']['name'] != null){
                 $this->load->library('upload', $config);

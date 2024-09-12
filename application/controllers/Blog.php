@@ -1,61 +1,70 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Blog extends CI_Controller {
-	//  cunstruct page ------------------------------------
-	public function __construct(){
+class Blog extends CI_Controller
+{
+        //  cunstruct page ------------------------------------
+        
+        public function __construct() {
                 parent::__construct();
 
                 $this->load->model('all_img');
                 $this->load->model('Contact');
                 $this->load->model('Blog_model');
-		$this->load->model('Web_model');
+                $this->load->model('Web_model');
         }
 
         // blog page -------------------------------------------
-	public function blog(){
+
+        public function blog() {
                 $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
                 $b['catg'] = $this->Web_model->get_all_catg();
-		$new = array_merge($a,$b);
-                $this->load->view('admin/blog',$new);
-	}
-        public function add_blog(){
-                $this->form_validation->set_rules('title','Title Name','required', array('required' => 'Please fill title name first..........'));
-                $this->form_validation->set_rules('desc','description','required');
-                $this->form_validation->set_rules('catg','Category','required');
-                $this->form_validation->set_rules('sdesc','short description','required',
-                                                                array('required' => 'Please fill short description first..........'));
+                $new = array_merge($a, $b);
+                $this->load->view('admin/blog', $new);
+        }
 
-                if($this->form_validation->run() == false){
+        public function add_blog() {
+                $this->form_validation->set_rules('title', 'Title Name', 'required', array('required' => 'Please fill title name first..........'));
+                $this->form_validation->set_rules('desc', 'description', 'required');
+                $this->form_validation->set_rules('catg', 'Category', 'required');
+                $this->form_validation->set_rules(
+                        'sdesc',
+                        'short description',
+                        'required',
+                        array('required' => 'Please fill short description first..........')
+                );
 
-                $error['error'] = validation_errors();
-                $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
-                $b['catg'] = $this->Web_model->get_all_catg();
-                $newdata = array_merge($a,$error,$b);
+                if ($this->form_validation->run() == false) {
 
-                $this->load->view('admin/blog',$newdata);
-                }else{
+                        $error['error'] = validation_errors();
+                        $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
+                        $b['catg'] = $this->Web_model->get_all_catg();
+                        $newdata = array_merge($a, $error, $b);
+
+                        $this->load->view('admin/blog', $newdata);
+                } else {
                         $config['upload_path'] = './assets/image/blog_img';
                         $config['allowed_types'] = 'gif|jpg|png';
-                        $config['max_size']     = '1024'; //1024 = 1mb
+                        $config['max_size']     = '1024'; //1024 = 1mb 
+                        // $config['max_width'] = '750';
+                        // $config['max_height'] = '750';
 
                         $this->load->library('upload', $config);
                         $this->upload->initialize($config);
 
-                        if ( ! $this->upload->do_upload('blogimg'))
-                        {
+                        if (! $this->upload->do_upload('blogimg')) {
                                 $error = array('error' => $this->upload->display_errors());
                                 $a['blog'] = $this->Blog_model->getallblog(); // get all blog from blog table
                                 $b['catg'] = $this->Web_model->get_all_catg();
-                                $newdata = array_merge($a,$error,$b);                                
-                                $this->load->view('admin/blog',$newdata);
-                        }else{
+                                $newdata = array_merge($a, $error, $b);
+                                $this->load->view('admin/blog', $newdata);
+                        } else {
 
 
 
                                 $upload_data = $this->upload->data();
                                 $file_name = $upload_data['file_name'];
-                                
+
                                 $new_img = preg_replace('/\s+/', '_', $file_name);
 
                                 $title  =        $this->input->post('title');
@@ -63,7 +72,7 @@ class Blog extends CI_Controller {
                                 $sdesc   =       $this->input->post('sdesc');
                                 $catg   =       $this->input->post('catg');
                                 $date   =        date('d-m-y');
-                                
+
                                 $data = array(
                                         'title' => $title,
                                         'category' => $catg,
@@ -73,31 +82,32 @@ class Blog extends CI_Controller {
                                         'content' => $desc
                                 );
                                 $a = $this->Blog_model->add_blog($data);
-                                if($a){
-                                        $this->session->set_flashdata('blogmsg','<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                if ($a) {
+                                        $this->session->set_flashdata('blogmsg', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <strong>Success!</strong> Your blog is added successfully....
                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                       </div>');
-                                      redirect(base_url('blog'));
-                                }else{
-                                        $this->session->set_flashdata('blogmsg','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        redirect(base_url('blog'));
+                                } else {
+                                        $this->session->set_flashdata('blogmsg', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                         <strong>Error</strong> you have made something wrong please add again ....
                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                       </div>');
-                                      redirect(base_url('blog'));
+                                        redirect(base_url('blog'));
                                 }
                         }
                 }
-
         }
-        public function blogdetails(){
+
+        public function blogdetails() {
                 $iid = $this->uri->segment(2);
                 $id = base64_decode($iid);
-                $a['blog']=$this->Blog_model->get_s_blog($id); // get specific blog against id
+                $a['blog'] = $this->Blog_model->get_s_blog($id); // get specific blog against id
                 $b['catg'] = $this->Web_model->get_all_catg();
-		$new = array_merge($a,$b);
-                $this->load->view('admin/blog_details',$new);
+                $new = array_merge($a, $b);
+                $this->load->view('admin/blog_details', $new);
         }
+
         public function update_blog(){
                 $img = $_FILES["blogimg"]["name"];
                 $id = $this->input->post('id');
@@ -161,23 +171,22 @@ class Blog extends CI_Controller {
                         }    
                }
         }
-        public function deleteblog(){
+
+        public function deleteblog() {
                 $id = $this->input->post('id');
                 $a = $this->Blog_model->del_blog_det($id);
-                if($a){
+                if ($a) {
                         $data = array(
-                                "result"=>"success",
-                                "message" =>"your blog is deleted"
+                                "result" => "success",
+                                "message" => "your blog is deleted"
                         );
-                }else{
+                } else {
                         $data = array(
-                                "result"=>"error",
-                                "message" =>"Something went wrong"
+                                "result" => "error",
+                                "message" => "Something went wrong"
                         );
                 }
 
                 echo json_encode($data);
         }
 }
-
-?>

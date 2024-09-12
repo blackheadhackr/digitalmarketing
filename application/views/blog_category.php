@@ -29,11 +29,11 @@
                 <div class="container text-center mt-5 mb-5">
     
                     <div class="page__heading">
-                        <h2>Our Blog</h2>
+                        <h2>Blog Category</h2>
                     </div>
 
                     <div class="page_breadcrumb">
-                        <p><a href="<?= base_url() ?>">Home</a> | <span>Our Blog</span> </p>
+                        <p><a href="<?= base_url() ?>">Home</a> | <span>Blog Category</span> </p>
                     </div>
     
                 </div>
@@ -55,7 +55,7 @@
                     <div class="row row-cols-1 row-cols-lg-2 g-5">
 
                         <!--==================== BLOG CARD SECTION ====================-->
-                        <div class="col-lg-8">
+                        <!-- <div class="col-lg-4">
 
                             <div class="blog__post__wrapper">
 
@@ -67,7 +67,6 @@
 
                                         <div class="post__thumbnail__wrapper">
                                             <a href="<?= base_url('blog-detail/'.$id) ?>">
-                                                <!-- <img src="<?= base_url('assets/images/post_01.jpg') ?>" alt=""> -->
                                                 <img src="<?=base_url()?>assets/image/blog_img/<?=$a->img?>" alt="<?=$a->title?>">
                                             </a>
                                         </div>
@@ -97,6 +96,62 @@
                                             <div class="post__excerpt">
                                                 <p><?=$a->desc?></p>
                                             </div>
+
+                                            <div class="post__read__more">
+                                                <a href="#!" class="btn__link">Read More <span><img src="assets/images/arrow-right2.svg" alt=""></span></a>
+                                            </div>
+
+                                        </div>
+
+                                    </article>
+
+                                <?php } ?>
+
+                            </div>
+
+                        </div> -->
+
+                        <div class="col-lg-4">
+
+                            <div class="blog__post__wrapper">
+
+                                <?php foreach($catgblog as $a){
+                                    $id = base64_encode($a->id);
+                                    ?>
+                                    
+                                    <article class="single__post__item">
+
+                                        <div class="post__thumbnail__wrapper">
+                                            <a href="<?= base_url('blog-detail/'.$id) ?>">
+                                                <img src="<?=base_url()?>assets/image/blog_img/<?=$a->img?>" alt="<?=$a->title?>">
+                                            </a>
+                                        </div>
+
+                                        <div class="post__content__wrapper">
+
+                                            <ul class="post__meta list-unstyled">
+                                                <li class="list__meta">
+                                                    <span>
+                                                        <i class="far fa-user"></i><span class="author vcard">Admin</span>
+                                                    </span>
+                                                </li>
+                                                <li class="list__meta">
+                                                    <a href="#!"><i class="far fa-comments"></i> Comments (3)</a>
+                                                </li>
+                                                <li class="list__meta">
+                                                    <span class="posted-on">
+                                                        <i class="far fa-clock"></i> <a href="#!"><?=$a->dateofupdation?></a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+
+                                            <h3 class="post__title border_effect">
+                                                <a href="<?= base_url('blog-detail/'.$id) ?>"><?=$a->title?></a>
+                                            </h3>
+
+                                            <!-- <div class="post__excerpt">
+                                                <p><?=$a->desc?></p>
+                                            </div> -->
 
                                             <div class="post__read__more">
                                                 <a href="#!" class="btn__link">Read More <span><img src="assets/images/arrow-right2.svg" alt=""></span></a>
@@ -242,23 +297,27 @@
                                     </h2>
                                     <ul class="widget__category list-unstyled">
                                         <?php foreach($catg as $cat) { ?>
-                                            <li><a href="<?=base_url('blog-category/').$cat->name?>"><?=$cat->name?><span><?=$cat->number_of_blogs?></span></a></li>
+                                            <li><a href="#!"><?=$cat->name?><span><?=$cat->number_of_blogs?></span></a></li>
                                         <?php } ?>
-                                        
                                     </ul>
                                 </div>
 
                                 
-                                <div class="widget">
+                                <!-- <div class="widget">
                                     <h2 class="widget__title">
                                         <span>Tags</span>
                                     </h2>
                                     <div class="tagcloud">
-                                    <?php foreach($catg as $cat) { ?>
-                                        <a href="<?=base_url('blog-category/').$cat->name?>"><?=$cat->name?></a>
-                                        <?php } ?>
+                                        <a href="#!">Design</a>
+                                        <a href="#!">Development</a>
+                                        <a href="#!">Startup</a>
+                                        <a href="#!">Strategu</a>
+                                        <a href="#!">Management</a>
+                                        <a href="#!">UI/UX</a>
+                                        <a href="#!">Optimization</a>
+                                        <a href="#!">Planning</a>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -279,7 +338,7 @@
     <div class="scroll__top__button">
         <a href="#" class="scroll__top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     </div>
-    
+        
     <!--==================== FOOTER SECTION ====================-->
 
     <?php $this->load->view('include/footer') ?>

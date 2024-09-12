@@ -10,6 +10,8 @@ class Admin extends CI_Controller {
         $this->load->model('Contact');
 		$this->load->model('Blog_model');
 		$this->load->model('Join_model');
+		$this->load->model('Web_model');
+		$this->load->model('Service_model');
    }
 	   
 	// dash bord-----------------------------------------
@@ -19,6 +21,8 @@ class Admin extends CI_Controller {
 		$a['web_data'] = $this->Contact->get_web_contact_data();
 		$a['table'] = $this->Blog_model->getuser();
 		$a['gallery'] = $this->all_img->get_gellery();
+		$a['catg'] = $this->Web_model->get_all_catg();
+		$a['services_data'] = $this->Service_model->get_all_survices();
 		$this->load->view('admin/first',$a);
 	}
 	// update banner ---------------------------------------

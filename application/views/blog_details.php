@@ -60,18 +60,33 @@
                                 <article class="post__details">
 
                                     <div class="post__thumb">
-                                    <img src="<?=base_url()?>assets/image/blog_img/<?=$blog->img?>" alt="<?=$blog->title?>">
+                                        <img src="<?=base_url()?>assets/image/blog_img/<?=$blog->img?>" alt="<?=$blog->title?>">
                                     </div>
 
                                     <ul class="post__meta list-unstyled">
-                                        <li><span><i class="far fa-user"></i><span class="author vcard">Admin</span></span></li>
-                                        <li><a href="#!"><i class="far fa-comments"></i> Comments (3)</a></li>
-                                        <li><span class="posted-on"><i class="far fa-clock"></i> <a href="#!"><?=$blog->dateofupdation?></a></span></li>
+                                        <li class="list__meta">
+                                            <span>
+                                                <i class="far fa-user"></i>
+                                                <span class="author vcard">Admin</span>
+                                            </span>
+                                        </li>
+                                        <li class="list__meta">
+                                            <a href="#!">
+                                                <i class="far fa-comments"></i> Comments (3)
+                                            </a>
+                                        </li>
+
+                                        <li class="list__meta">
+                                            <span class="posted-on">
+                                                <i class="far fa-clock"></i> <a href="#!"><?=$blog->dateofupdation?></a>
+                                            </span>
+                                        </li>
                                     </ul>
 
                                     <?=$blog->content?>
 
                                 </article>
+
                                 <!-- <article class="post__details">
 
                                     <div class="post__thumb">
@@ -120,7 +135,7 @@
                                 </article> -->
 
 
-                                <div class="post__footer">
+                                <!-- <div class="post__footer">
                                     
                                     <div class="post__tags">
                                         <h5 class="post__footer__title">Tags:</h5>
@@ -133,33 +148,34 @@
 
                                     <div class="social__share">
                                         <h5 class="post__footer__title">Share:</h5>
-                                            <ul class="post__share list-unstyled">
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fab fa-facebook-f"></i>
-                                                    </a>
-                                                </li>
-            
-                                                <li>
-                                                    <a href="#!">
-                                                        <i class="fab fa-twitter"></i>
-                                                    </a>
-                                                </li>
-            
-                                                <li>
-                                                    <a href="#!">
-                                                        <i class="fab fa-linkedin-in"></i>
-                                                    </a>
-                                                </li>
-            
-                                                <li>
-                                                    <a href="#!">
-                                                        <i class="fab fa-pinterest"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                        <ul class="post__share list-unstyled">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+        
+                                            <li>
+                                                <a href="#!">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+        
+                                            <li>
+                                                <a href="#!">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </li>
+        
+                                            <li>
+                                                <a href="#!">
+                                                    <i class="fab fa-pinterest"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </div>
+
+                                </div> -->
 
                             </div>
 
@@ -209,35 +225,23 @@
                                     </h2>
                                     <ul class="widget__category list-unstyled">
                                     <?php foreach($catg as $cat) { ?>
-                                            <li><a href="#!"><?=$cat->name?><span><?=$cat->number_of_blogs?></span></a></li>
+                                            <li><a href="<?=base_url('blog-category/').$cat->name?>"><?=$cat->name?><span><?=$cat->number_of_blogs?></span></a></li>
                                         <?php } ?>
-                                        <!--<li><a href="#!">DEVELOPMENT <span>(22)</span></a></li>
-                                        <li><a href="#!">STRATEGY <span>(30)</span></a></li>
-                                        <li><a href="#!">DESIGN <span>(24)</span></a></li>
-                                        <li><a href="#!">UI/UX Experience <span>(15)</span></a></li>
-                                        <li><a href="#!">WORK CULTURE <span>(10)</span></a></li>
-                                        <li><a href="#!">Digital Marketing <span>(13)</span></a></li>
-                                        <li><a href="#!">Product Design <span>(05)</span></a></li>
-                                        <li><a href="#!">Web Development <span>(03)</span></a></li> -->
+                                        
                                     </ul>
                                 </div>
 
                                 
-                                <!-- <div class="widget">
+                                <div class="widget">
                                     <h2 class="widget__title">
                                         <span>Tags</span>
                                     </h2>
                                     <div class="tagcloud">
-                                        <a href="#!">Design</a>
-                                        <a href="#!">Development</a>
-                                        <a href="#!">Startup</a>
-                                        <a href="#!">Strategu</a>
-                                        <a href="#!">Management</a>
-                                        <a href="#!">UI/UX</a>
-                                        <a href="#!">Optimization</a>
-                                        <a href="#!">Planning</a>
+                                    <?php foreach($catg as $cat) { ?>
+                                        <a href="#!"><?=$cat->name?></a>
+                                        <?php } ?>
                                     </div>
-                                </div> -->
+                                </div>
 
                             </div>
 
@@ -255,6 +259,10 @@
 
     </main>
 
+    <!--=============== SCROLL TOP SECTION ===============-->
+    <div class="scroll__top__button">
+        <a href="#" class="scroll__top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    </div>
     
     <!--==================== FOOTER SECTION ====================-->
 

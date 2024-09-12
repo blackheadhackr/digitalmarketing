@@ -44,6 +44,10 @@
 
     </main>
 
+    <!--=============== SCROLL TOP SECTION ===============-->
+    <div class="scroll__top__button">
+        <a href="#" class="scroll__top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    </div>
     
     <!--==================== FOOTER SECTION ====================-->
 

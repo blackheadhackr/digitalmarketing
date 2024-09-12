@@ -50,7 +50,7 @@
                 </ul>
 
                 <div class="d-flex">
-                    <a href="#" class="nav__btn">Get in touch</a>
+                    <a href="<?=base_url('contact-us')?>" class="nav__btn">Get in touch</a>
                 </div>
 
             </div>

@@ -28,6 +28,12 @@ class Blog_model extends CI_Model
         $a = $this->db->get('blog')->result();
         return $a;
     }
+    public function getallblogbycatg($catg){
+        $this->db->select('*');
+        $this->db->where('category',$catg);
+        $a = $this->db->get('blog')->result();
+        return $a;
+    }
     public function getfiveblog(){
         $this->db->select('*');
         $this->db->order_by('id','desc');

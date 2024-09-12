@@ -10,8 +10,8 @@ class Home extends CI_Controller {
 		$this->load->model('Contact');
 		$this->load->model('Blog_model');
 		$this->load->model('Web_model');
+		
 	}
-
 	public function index()
 	{
 		$this->load->view('home');
@@ -47,6 +47,17 @@ class Home extends CI_Controller {
 		$this->load->view('blog_details',$new);
 	}
 
+	public function blog_category()
+	{
+		$catg = $this->uri->segment(2);
+		$a['catgblog'] = $this->Blog_model->getallblogbycatg($catg);
+		// $a['blog'] = $this->Blog_model->getallblog();
+		$b['blogs'] = $this->Blog_model->getfiveblog();
+		$c['catg'] = $this->Web_model->get_all_catg1();
+		$new = array_merge($a,$b,$c);
+		$this->load->view('blog_category',$new);
+	}
+
 	public function service()
 	{
 		$this->load->view('service');
@@ -59,7 +70,7 @@ class Home extends CI_Controller {
 
 	public function contact()
 	{
-		$this->load->view('contact');
+		$a['condta'] = $this->Web_model->get_all_contact();
+		$this->load->view('contact',$a);
 	}
-
 }

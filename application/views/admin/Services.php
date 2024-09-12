@@ -40,7 +40,7 @@
                                 <form id="servicesadd" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="formFileLg" class="form-label">Image<span
-                                                class="text-danger">* (img size: 500X500 , 1MB)</span></label>
+                                                class="text-danger">* (1MB)</span></label>
                                         <input class="form-control form-control-lg" id="formFileLg" type="file" name="servicesimage">
                                     </div>
                                     <div class="text-danger img_error"></div>
@@ -51,7 +51,7 @@
                                         </div><div class="text-danger title_error"></div>
                                     <div class="mb-3">
                                         <label for="sdesc" class="form-label">Short Discription<span
-                                                class="text-danger">* (Min - 155chr & max - 160chr)</span></label>
+                                                class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="sdesc" name="sdesc">
                                     </div><div class="text-danger desc_error"></div>
                                   
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                    <hr>
                 <div class="table-responsive">
                         <table class="table table-striped table-sm" id="userdata">
                             <thead class="text-center">
@@ -124,7 +124,7 @@
                         <input type="hidden" class="form-control id" name="id">
                             <div class="mb-3">
                                 <label for="formFileLg" class="form-label">Image<span
-                                        class="text-danger">* (img size: 500X500 , 1MB)</span></label>
+                                        class="text-danger">* (1MB)</span></label>
                                 <input class="form-control form-control-lg" id="formFileLg" type="file" name="servicesimage">
                             </div>
                             <div class="text-danger img_error_modl"></div>
@@ -132,13 +132,13 @@
                                 <label for="title" class="form-label">Title<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control title" id="title" name="title">
-                                <div class="title_error_modl text-center"></div>
+                                <div class="title_error_modl text-center mb-3"></div>
                                 
                             <div class="mb-3">
                                 <label for="sdesc" class="form-label">Short Discription<span
-                                        class="text-danger">* (Min - 155chr & max - 160chr)</span></label>
+                                        class="text-danger">*</span></label>
                                 <input type="text" class="form-control disc" id="sdesc" name="sdesc"> 
-                                <div class="disc_error_modl text-center"></div>
+                                <div class="disc_error_modl text-center mb-3"></div>
 
                             
                             <button type="submit" class="btn btn-primary my-2">Add Blog</button>
