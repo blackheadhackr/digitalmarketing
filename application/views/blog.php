@@ -77,7 +77,7 @@
                                             <ul class="post__meta list-unstyled">
                                                 <li class="list__meta">
                                                     <span>
-                                                        <i class="far fa-user"></i><span class="author vcard">Admin</span>
+                                                        <i class="far fa-user"></i><span class="author vcard"> Admin</span>
                                                     </span>
                                                 </li>
                                                 <li class="list__meta">

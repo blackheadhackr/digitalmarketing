@@ -84,15 +84,15 @@
 
     <section class="who__we__are">
 
-      <div class="who__we__are__inner">
+      <div class="who__we__are__inner py-5">
 
-        <div class="container py-5">
+        <div class="container mt-5 mb-5">
 
           <div class="row row-cols-1 row-cols-md-2 g-4">
 
             <div class="col-md-8">
 
-              <div class="who__we__are__left mt-5 mb-5">
+              <div class="who__we__are__left h-100">
 
                 <div class="section__heading">
                   <h2>Who We Are</h2>
@@ -111,9 +111,9 @@
 
             <div class="col-md-4">
 
-              <div class="who__we__are__right">
+              <div class="who__we__are__right h-100">
 
-
+                <img src="<?= base_url('assets/images/about.jpg') ?>" alt="">
 
               </div>
 
@@ -136,106 +136,103 @@
 
       <div class="home__service__inner py-5">
 
+        <div class="home__section__head text-center">
+
+          <p class="sub__title">Most experienced services</p>
+          <h2 class="title">services</h2>
+
+        </div>
+
         <div class="container">
 
+          <div class="row row-cols-1 row-cols-lg-2 justify-content-center g-4">
 
-          <div class="row row-cols-1 justify-content-center g-4">
 
             <div class="col-lg-5 col-md-6">
 
               <div class="home__service__card">
                 <span class="service__num">01</span>
-                <h3 class="border-effect"><a href="<?=base_url('our-service')?>">Development</a></h3>
-                <div class="service__img text-end">
+                <h3 class="border_effect"><a href="<?=base_url('our-service')?>">Development</a></h3>
+                <div class="service__image service__img text-end">
                   <img src="<?= base_url('assets/images/service__1.png') ?>" alt="">
                 </div>
+                <a class="xb-overlay" href="<?= base_url('our-service') ?>"></a>
               </div>
 
             </div>
+
 
             <div class="col-lg-7 col-md-6">
 
               <div class="home__service__card">
                 <span class="service__num">02</span>
                 <h3 class="border-effect"><a href="<?=base_url('our-service')?>">Marketing Strategy</a></h3>
-                <div class="service__img text-end">
+                <div class="service__image service__img1">
                   <img src="<?= base_url('assets/images/service__2.png') ?>" alt="">
                 </div>
+                <a class="xb-overlay" href="<?= base_url('our-service') ?>"></a>
               </div>
 
             </div>
 
+
             <div class="col-lg-4 col-md-6">
+
               <div class="home__service__card">
                 <span class="service__num">03</span>
                 <h3 class="border-effect"><a href="<?=base_url('our-service')?>">UI Design</a></h3>
-                <div class="service__img text-end">
+                <div class="service__image service__img2 text-end">
                   <img src="<?= base_url('assets/images/service__3.png') ?>" alt="">
                 </div>
+                <a class="xb-overlay" href="<?= base_url('our-service') ?>"></a>
               </div>
+
             </div>
+
 
             <div class="col-lg-4 col-md-6">
               <div class="home__service__card">
                 <span class="service__num">04</span>
                 <h3 class="border-effect"><a href="<?=base_url('our-service')?>">Marketing Strategy</a></h3>
-                <div class="service__img text-end">
+                <div class="service__image service__img3 text-end">
                   <img src="<?= base_url('assets/images/service__4.png') ?>" alt="">
                 </div>
+                <a class="xb-overlay" href="<?= base_url('our-service') ?>"></a>
+
               </div>
             </div>
+
 
             <div class="col-lg-4 col-md-6">
               <div class="home__service__card">
                 <span class="service__num">05</span>
-                <h3 class="border-effect"><a href="<?=base_url('our-service')?>">App Design</a></h3>
-                <div class="service__img text-end">
+                <h3 class="border_effect"><a href="<?=base_url('our-service')?>">App Design</a></h3>
+                <div class="service__image service__img4 text-end">
                   <img src="<?= base_url('assets/images/service__5.png') ?>" alt="">
                 </div>
+                <a class="xb-overlay" href="<?= base_url('our-service') ?>"></a>
+
               </div>
             </div>
 
-            <!-- <div class="col-lg-4 col-md-6">
-              <div class="ds-service pos-rel mb-30">
-                <span class="xb-item--number">03</span>
-                <h3 class="xb-item--title border-effect"><a href="service-single.html">Ul Design</a></h3>
-                <div class="xb-item--img xb-item--img2">
-                  <img src="assets/img/digital-studio/ds-service/ds-ser03.png" alt="">
-                </div>
-                <a class="xb-overlay" href="service-single.html"></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-              <div class="ds-service pos-rel mb-30">
-                <span class="xb-item--number">04</span>
-                <h3 class="xb-item--title border-effect"><a href="service-single.html">Marketing strategy</a></h3>
-                <div class="xb-item--img xb-item--img3">
-                  <img src="assets/img/digital-studio/ds-service/ds-ser04.png" alt="">
-                </div>
-                <a class="xb-overlay" href="service-single.html"></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-              <div class="ds-service pos-rel mb-30">
-                <span class="xb-item--number">05</span>
-                <h3 class="xb-item--title border-effect"><a href="service-single.html">App Design</a></h3>
-                <div class="xb-item--img xb-item--img4">
-                  <img src="assets/img/digital-studio/ds-service/ds-ser05.png" alt="">
-                </div>
-                <a class="xb-overlay" href="service-single.html"></a>
-              </div>
-            </div> -->
 
           </div>
 
 
         </div>
 
+
+        <div class="section__btn text-center mt-5">
+          <a href="#" class="button">See All Services</a>
+        </div>
+        
+
       </div>
 
     </section>
+
+
+
 
     <!--==================== BLOG SECTION ====================-->
 
@@ -243,14 +240,143 @@
 
       <div class="article__inner py-5">
 
-        <div class="container">
+        <div class="home__section__head text-center">
 
-          <div class="article__head">
+          <p class="sub__title">Explore our most recent agency articles</p>
+          <h2 class="title">recent blog</h2>
 
-            <p>Explore our most recent agency articles</p>
-            <h2>recent blog</h2>
+        </div>
+
+        <div class="container mb-5">
+
+
+          <div class="home__article__wrapper">
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+              <?php 
+              foreach($blog as $a){
+                $id = base64_encode($a->id)
+                ?>
+              <div class="col-lg-4">
+
+                <div class="article__card">
+
+                  <div class="article__img">
+                    <a href="<?= base_url('blog-details') ?>">
+                      <img src="<?= base_url('assets/image/blog_img/'.$a->img) ?>" alt="">
+                    </a>
+                  </div>
+
+                  <div class="article__content">
+
+                    <div class="article__meta d-flex justify-content-between">
+
+                      <span class="article__meta__span">By: <span>Admin</span></span>
+                      <span class="article__meta__span"><?=$a->dateofupdation?></span>
+
+                    </div>
+
+
+                    <h3 class="article__title border_effect">
+                      <a href="<?= base_url('blog-details') ?>"><?=$a->title?></a>
+                    </h3>
+
+                    <div class="article__btn mt-4">
+                      <a href="<?=base_url('blog-detail/'.$id)?>" class="button">Read more</a>
+                    </div>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <?php  } ?>
+              
+
+
+              <!-- <div class="col-lg-4">
+
+                <div class="article__card">
+
+                  <div class="article__img">
+                    <a href="<?= base_url('blog-details') ?>">
+                      <img src="<?= base_url('assets/images/blog_rec_02.png') ?>" alt="">
+                    </a>
+                  </div>
+
+                  <div class="article__content">
+
+                    <div class="article__meta d-flex justify-content-between">
+
+                      <span class="article__meta__span">By: <span>Admin</span></span>
+                      <span class="article__meta__span">September 2024</span>
+
+                    </div>
+
+
+                    <h3 class="article__title border_effect">
+                      <a href="<?= base_url('blog-details') ?>">How Analytics Can Drive Business Success</a>
+                    </h3>
+
+                    <div class="article__btn mt-4">
+                      <a href="<?=base_url('contact-us')?>" class="button">Read more</a>
+                    </div>
+
+                  </div>
+
+
+                </div>
+
+              </div> -->
+
+
+              <!-- <div class="col-lg-4">
+
+                <div class="article__card">
+
+                  <div class="article__img">
+                    <a href="<?= base_url('blog-details') ?>">
+                      <img src="<?= base_url('assets/images/blog_rec_03.png') ?>" alt="">
+                    </a>
+                  </div>
+
+                  <div class="article__content">
+
+                    <div class="article__meta d-flex justify-content-between">
+
+                      <span class="article__meta__span">By: <span>Admin</span></span>
+                      <span class="article__meta__span">September 2024</span>
+
+                    </div>
+
+
+                    <h3 class="article__title border_effect">
+                      <a href="<?= base_url('blog-details') ?>">How Analytics Can Drive Business Success</a>
+                    </h3>
+
+                    <div class="article__btn mt-4">
+                      <a href="<?=base_url('contact-us')?>" class="button">Read more</a>
+                    </div>
+
+                  </div>
+
+
+                </div>
+
+              </div> -->
+
+            </div>
+
+
+            <div class="section__btn text-center mt-5">
+              <a href="#" class="button">See All Blogs</a>
+            </div>
 
           </div>
+
 
         </div>
 

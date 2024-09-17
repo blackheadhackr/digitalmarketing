@@ -63,5 +63,12 @@ class Web_model extends CI_Model
         $a = $this->db->get('contact_details')->row();
         return $a;
     }
+    public function get_some_blog(){
+        $this->db->select('*');
+        $this->db->order_by('id','desc');
+        $this->db->limit(6);
+        $a= $this->db->get('blog')->result();
+        return $a;
+    }
     
 }

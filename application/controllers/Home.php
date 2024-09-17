@@ -14,7 +14,8 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('home');
+		$a['blog'] = $this->Web_model->get_some_blog();
+		$this->load->view('home',$a);
 	}
 
 	public function starter()

@@ -1,4 +1,4 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark text-light sidebar collapse" style="position:fixed; height:100vh">
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block text-light sidebar collapse" style="position:fixed; height:100vh">
 
     <div class="position-sticky pt-3">
 
@@ -12,9 +12,9 @@
                 <a class="nav-link" href="<?= base_url('load-catg') ?>"><i class="fa fa-tachometer"></i> category </a>
             </li>
 
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('update-banner') ?>"><i class="fa-solid fa-image"></i> Add Banner </a>
-            </li> -->
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Contact') ?>"><i class="fa-solid fa-address-card"></i>Contact Details </a>
@@ -29,18 +29,18 @@
             <?php if ($this->session->userdata('usertype') == 'admin' || $this->session->userdata('usertype') == 'super admin') { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('web-contact-data') ?>"><i class="fa-regular fa-clipboard"></i>
-                        Contect Data
+                        Contact Data
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('new-joiner') ?>"><i class="fa-solid fa-person-harassing"></i>
-                        Collaboration
+                    <a class="nav-link" href="<?= base_url('New-Joiner') ?>"><i class="fa-solid fa-person-harassing"></i>
+                        Join Data
                     </a>
                 </li>
             <?php } ?>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('gallery') ?>"><i class="fa-solid fa-icons"></i>
-                    Portfolio
+                    Image Gallery
                 </a>
             </li>
             <li class="nav-item">
@@ -56,6 +56,16 @@
             </a>
         </h6>
         <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Current month
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Last quarter
+                </a>
+            </li>
             <?php if ($this->session->userdata('usertype') == 'admin' || $this->session->userdata('usertype') == 'super admin') { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('create-user') ?>"><i class="fa-solid fa-user-plus"></i>

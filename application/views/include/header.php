@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg shadow py-4">
+    <nav class="navbar navbar-expand-lg fixed-top shadow py-4">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">LOGO</a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
                 </ul>
 
                 <div class="d-flex">
-                    <a href="<?=base_url('contact-us')?>" class="nav__btn">Get in touch</a>
+                    <a href="<?=base_url('contact-us')?>" class="button">Get in touch</a>
                 </div>
 
             </div>

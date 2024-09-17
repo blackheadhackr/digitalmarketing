@@ -224,73 +224,14 @@
                     <div class="row row-cols-1 row-cols-lg-2">
 
                         <div class="col-lg-6">
+
                             <div class="what__we__do__left">
+
                                 <div class="section__title">
                                     <span class="sub__title">what we offer</span>
                                     <div class="clearfix"></div>
                                     <h2 class="title">Discover Our <br> <span>Capabilities</span></h2>
                                 </div>
-
-
-                                <!-- <div class="accordion">
-
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur molestiae corrupti adipisci eius libero ratione officia! Atque commodi quisquam consectetur fugiat officia corrupti, suscipit nesciunt incidunt exercitationem adipisci dolorem!
-
-                                </div> -->
-
-
-
-                                <!-- <div class="accordion-wrapper">
-                                    <ul class="accordion_box clearfix">
-                                        <li class="block accordion active-block">
-                                            <div class="acc-btn">
-                                                High Standards
-                                                <span class="arrow"></span>
-                                            </div>
-                                            <div class="acc_body current">
-                                                <div class="content">
-                                                    <p>Our mission is to empower businesses and individuals by harnessing the full potential of the digital landscape. </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="accordion block">
-                                            <div class="acc-btn">
-                                                Focus on People
-                                                <span class="arrow"></span>
-                                            </div>
-                                            <div class="acc_body">
-                                                <div class="content">
-                                                    <p>Our mission is to empower businesses and individuals by harnessing the full potential of the digital landscape. </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="accordion block">
-                                            <div class="acc-btn">
-                                                Different Thinking
-                                                <span class="arrow"></span>
-                                            </div>
-                                            <div class="acc_body">
-                                                <div class="content">
-                                                    <p>Our mission is to empower businesses and individuals by harnessing the full potential of the digital landscape. </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="accordion block">
-                                            <div class="acc-btn">
-                                                Business Innovation
-                                                <span class="arrow"></span>
-                                            </div>
-                                            <div class="acc_body">
-                                                <div class="content">
-                                                    <p>Our mission is to empower businesses and individuals by harnessing the full potential of the digital landscape. </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div> -->
-
-
-
 
                                 <div class="collapsible-tabs__wrapper">
 
@@ -335,11 +276,6 @@
                                     </div>
 
                                 </div>
-
-
-
-
-
 
                             </div>
                         </div>
