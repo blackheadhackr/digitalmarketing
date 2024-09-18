@@ -12,9 +12,9 @@
                 <a class="nav-link" href="<?= base_url('load-catg') ?>"><i class="fa fa-tachometer"></i> category </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('update-banner') ?>"><i class="fa-solid fa-image"></i> Add Banner </a>
-            </li>
+            <!--<li class="nav-item">-->
+            <!--    <a class="nav-link" href="<?= base_url('update-banner') ?>"><i class="fa-solid fa-image"></i> Add Banner </a>-->
+            <!--</li>-->
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Contact') ?>"><i class="fa-solid fa-address-card"></i>Contact Details </a>
@@ -33,14 +33,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('New-Joiner') ?>"><i class="fa-solid fa-person-harassing"></i>
-                        Join Data
+                    <a class="nav-link" href="<?= base_url('new-joiner') ?>"><i class="fa-solid fa-person-harassing"></i>
+                        Collaboration
                     </a>
                 </li>
             <?php } ?>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('gallery') ?>"><i class="fa-solid fa-icons"></i>
-                    Image Gallery
+                    Portfolio
                 </a>
             </li>
             <li class="nav-item">
@@ -51,21 +51,21 @@
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Saved reports</span>
+            <span>More Option</span>
             <a class="link-secondary" href="#" aria-label="Add a new report">
             </a>
         </h6>
         <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Current month
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Last quarter
-                </a>
-            </li>
+        <!--    <li class="nav-item">-->
+        <!--        <a class="nav-link" href="#">-->
+        <!--            Current month-->
+        <!--        </a>-->
+        <!--    </li>-->
+        <!--    <li class="nav-item">-->
+        <!--        <a class="nav-link" href="#">-->
+        <!--            Last quarter-->
+        <!--        </a>-->
+        <!--    </li>-->
             <?php if ($this->session->userdata('usertype') == 'admin' || $this->session->userdata('usertype') == 'super admin') { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('create-user') ?>"><i class="fa-solid fa-user-plus"></i>

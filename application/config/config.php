@@ -66,8 +66,7 @@ $config['uri_protocol']	= 'REQUEST_URI';
 |
 | Note: This option is ignored for CLI requests.
 */
-$config['url_suffix'] = '';
-
+    $config['url_suffix'] = '';
 /*
 |--------------------------------------------------------------------------
 | Default Language
