@@ -29,13 +29,7 @@
 
                 <div class="table-responsive dashcol">
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                        <!-- first row card  -->
-                        <!-- <div class="col-sm-3">
-                            <div class="well" style="background: #7DA0FA;color:#fff">
-                                <h4>Total Join Us</h4>
-                                <p><?=count($joiner)?> Person</p>
-                            </div>
-                        </div> -->
+                       
                         <div class="col-lg-3">
                             <div class="well h-100" style="background: #4747A1; color:#fff">
                                 <h4><a href="<?=base_url('blog')?>" class="text-white text-decoration-none">Total Blog Upload</a></h4>
@@ -46,7 +40,7 @@
                         <div class="col-lg-3">
                             <div class="well h-100" style="background: #7978E9; color:#fff">
                                 <h4><a href="<?=base_url('web-contact-data')?>" class="text-white text-decoration-none">Get Contact Data</a></h4>
-                                <p><?=count($web_data)?> contact</p>
+                                <p><?=count($web_data)?> Contact</p>
                             </div>
                         </div>
 
@@ -60,29 +54,35 @@
                         <!-- secound row card  -->
                         <div class="col-lg-3">
                             <div class="well h-100" style="background: #944E63; color:#fff">
-                                <h4> <a href="<?=base_url('gallery')?>" class="text-white text-decoration-none"></a>Gallery Image</h4>
-                                <p><?=count($gallery)?> Total image</p>
+                                <h4> <a href="<?=base_url('gallery')?>" class="text-white text-decoration-none"></a>Portfolio Image</h4>
+                                <p><?=count($gallery)?> Portfolio Image</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3">
                             <div class="well h-100" style="background: #CAA6A6;color:#fff">
-                                <h4>Total Blog</h4>
-                                <p>100 Million</p>
+                            <h4> <a href="<?=base_url('load-catg')?>" class="text-white text-decoration-none">Total Category</a></h4>
+                            <p><?=count($catg)?> Category</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3">
                             <div class="well h-100" style="background: #B47B84;color:#fff">
-                                <h4>Contect Data</h4>
-                                <p>10 Million</p>
+                            <h4> <a href="<?=base_url('services')?>" class="text-white text-decoration-none">Total Services</a></h4>
+                            <p><?=count($services_data)?> Services</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3">
                             <div class="well h-100" style="background: #944E63;color:#fff">
-                                <h4>Total Donation</h4>
-                                <p>30%</p>
+                            <h4> <a href="<?=base_url('new-joiner')?>" class="text-white text-decoration-none">Collaboration</a></h4>
+                            <p><?=count($joiner)?> Collaboration</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="well h-100" style="background: #7978E9; color:#fff">
+                            <h4> <a href="<?=base_url('new-joiner')?>" class="text-white text-decoration-none">Jobs (future)</a></h4>
+                            <p><?=count($joiner)?> Jobs</p>
                             </div>
                         </div>
                         <!-- Third row card  -->
